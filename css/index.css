@@ -54,6 +54,7 @@ table {
 html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
 
 h1, h2, h3, h4, h5 {
@@ -73,7 +74,7 @@ p {
 
 nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: auto;
     margin-bottom: 2%;
     width: 800px;
@@ -202,9 +203,71 @@ footer nav {
     align-items: center;
     padding: 20px 2%;
     font-size: 14px;
+    margin-bottom: 0;
+    margin-left: 0;
+    /* I added this line out because the example image showed all the links
+    pushed to the left side and I wasn't sure if we were supposed to emulate this */
 }
 
 footer nav a {
     color: white;
     text-decoration: none;
+    
+}
+
+/* About Page Styling */
+
+.topContent {
+    padding: 0 2%;
+}
+
+.topContent p {
+    margin-bottom: 2%;
+    
+}
+
+.aboutBoxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: space-between;
+    border-top: 1px dashed black;
+}
+
+.aboutBoxes div {
+    width: 44%;
+    border-bottom: 1px dashed black;
+    margin: 4% 0;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 36%;
+    padding: 2%;
+    margin: 5% 0;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+button:hover {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+	0 10px 10px rgba(0,0,0,0.22);
+}
+
+button:active {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.30), 
+	0 10px 10px rgba(0,0,0,0.27);
+	transform: translateY(3px);
+}
+
+.aboutBoxes img {
+    margin-bottom: 5%;
+}
+
+.lowerContent {
+    margin-bottom: 3%;
 }
