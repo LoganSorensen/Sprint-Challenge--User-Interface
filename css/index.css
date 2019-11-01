@@ -51,6 +51,54 @@ table {
     box-sizing: border-box;
 }
 
+@media only screen and (max-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    header img {
+        display: none;
+    }
+
+    .top-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .boxes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .bottom-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aboutBoxes {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        width: 100vw;
+    }
+
+}
+
 html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
