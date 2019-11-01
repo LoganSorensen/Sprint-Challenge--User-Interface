@@ -34,7 +34,7 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. If you were to describe semantic HTML to the next cohort of students, what would you say?
 
-    -Semantic HTML expresses meaning to the browser and other developers. Elements like <section> and <header> inform the reader about the type of content contained inside these tags. Conversly elements like <div> can be used in a similar fashion, but it becomes more difficult to interpret the contain within.
+    -Semantic HTML expresses meaning to the browser and other developers. Elements like <section> and <header> inform the reader about the type of content contained inside these tags. Conversely elements like <div> can be used in a similar fashion, but it becomes more difficult to interpret the content within.
 
 2. Name two big differences between ```display: block;``` and ```display: inline;```.
 
@@ -46,7 +46,7 @@ Edit this document to include your answers after each question. Make sure to lea
 
 4. While using flexbox, what axis does the following property work on: ```align-items: center```?
 
-    -The align-items property always works on the cross-axis i.e. the axis that runs perpindicular to the main axis.
+    -The align-items property always works on the cross-axis i.e. the axis that runs perpendicular to the main axis.
 
 5. Explain why git is valuable to a team of developers.
 
