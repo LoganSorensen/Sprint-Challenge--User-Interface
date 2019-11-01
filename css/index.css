@@ -51,9 +51,58 @@ table {
     box-sizing: border-box;
 }
 
+@media only screen and (max-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    header img {
+        display: none;
+    }
+
+    .top-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .boxes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .bottom-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aboutBoxes {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        width: 100vw;
+    }
+
+}
+
 html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
 
 h1, h2, h3, h4, h5 {
@@ -69,6 +118,70 @@ p {
 .container {
     width: 800px;
     margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 1%;
+    width: 800px;
+    transition: all 0.35s ease;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    margin-top: 5%;
+    position: relative;
+    padding: 0.8% 1% 0;
+    height: 27px;
+}
+
+ nav a:before,  nav a:after {
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    content: '';
+    transition: all 0.35s ease;
+    opacity: 0;
+}
+
+ nav a:before {
+    left: 0;
+    top: 0;
+    border-left: 3px solid #c0392b;
+    border-top: 3px solid #c0392b;
+    transform: translate(100%, 50%);
+  }
+
+   nav a:after {
+    right: 0;
+    bottom: 0;
+    border-right: 3px solid #c0392b;
+    border-bottom: 3px solid #c0392b;
+    transform: translate(-100%, -50%);
+  }
+
+ 
+ nav a:hover:before,
+ nav .current a:before,
+ nav a:hover:after,
+ nav .current a:after {
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  opacity: 1;
+}
+
+nav img {
+    margin-top: 2%;
+    padding: 1% 0
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5%;
 }
 
 .top-content {
@@ -101,10 +214,56 @@ p {
     justify-content: space-evenly;
 }
 
+.box:hover {
+    transform: scale(1.3);
+    transition: all 0.4s ease;
+}
+
+.box:nth-child(1) {
+    background: teal;
+}
+
+
+.box:nth-child(2) {
+    background: gold;
+}
+
+.box:nth-child(3) {
+    background: cadetblue;
+}
+
+.box:nth-child(4) {
+    background: coral;
+}
+
+.box:nth-child(5) {
+    background: crimson;
+}
+
+.box:nth-child(6) {
+    background: forestgreen;
+}
+
+.box:nth-child(7) {
+    background: darkorchid;
+}
+
+.box:nth-child(8) {
+    background: hotpink;
+}
+
+.box:nth-child(9) {
+    background: indigo;
+}
+
+.box:nth-child(10) {
+    background: dodgerblue;
+}
+
 .middle-content .boxes .box {
     width: 12.5%;
     height: 100px;
-    background: black;
+    /* background: black; */
     margin: 20px 2.5%;
     color: white;
     display: flex;
@@ -138,9 +297,71 @@ footer nav {
     align-items: center;
     padding: 20px 2%;
     font-size: 14px;
+    margin-bottom: 0;
+    margin-left: 0;
+    /* I added this line out because the example image showed all the links
+    pushed to the left side and I wasn't sure if we were supposed to emulate this */
 }
 
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+/* About Page Styling */
+
+.topContent {
+    padding: 0 2%;
+}
+
+.topContent p {
+    margin-bottom: 2%;
+    
+}
+
+.aboutBoxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: space-between;
+    border-top: 1px dashed black;
+}
+
+.aboutBoxes div {
+    width: 44%;
+    border-bottom: 1px dashed black;
+    margin: 4% 0;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 36%;
+    padding: 2%;
+    margin: 5% 0;
+    font-weight: bold;
+    font-size: 15px;
+    transition: all 0.4s ease-in-out;
+}
+
+button:hover {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+    0 10px 10px rgba(0,0,0,0.22);
+}
+
+button:active {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.30), 
+	0 10px 10px rgba(0,0,0,0.27);
+	transform: translateY(3px);
+}
+
+.aboutBoxes img {
+    margin-bottom: 5%;
+}
+
+.lowerContent {
+    margin: 0 3% 3%;
 }
